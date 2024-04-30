@@ -1,0 +1,23 @@
+﻿@model UserSignInModel
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Giriş</title>
+</head>
+<body>
+    <form asp-action="SignIn" method="post">
+        <label>Kullanıcı Adı</label>
+        <input asp-for="@Model.UserName" class="form-control" />
+        <span asp-validation-for="UserName"></span>
+        <label>Şifre</label>
+        <input asp-for="@Model.Password" class="form-control" />
+        <span asp-validation-for="Password"></span>
+
+        
+        <input type="checkbox" asp-for="@Model.Remember" class="form-control" /><label>Beni Hatırla</label>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Giriş Yap</button>
+        </div>
+    </form>
+</body>
+</html>
